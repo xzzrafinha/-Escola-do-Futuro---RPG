@@ -1,1 +1,0 @@
-# -Escola-do-Futuro---RPG
