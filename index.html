@@ -38,10 +38,15 @@
       
      <button class="btn-proximo" data-proximo="04" >PERGUNTAR A ALGUÉM</button>
      <button class="btn-proximo" data-proximo="5" >VOLTAR DE ONDE VEIO</button>
-     <button class="btn-proximo" data-proximo="6" >EXPLORAR POR CONTA PRÓPRIA</button>
+     <button class="btn-proximo" data-proximo="7" >EXPLORAR POR CONTA PRÓPRIA</button>
 
       </div>
       
+
+
+      <div class="passo" id="5">
+        <Img src="queda.jpg" 
+       <p> Iara decide que a aventura é grande demais e volta para casa, mas sempre se pergunta o que teria encontrado.</p>      </div>
       
 
       <div class="passo" id="passo-3">
@@ -70,8 +75,15 @@
 
         <!-- alterar o cenério nessa parte -->
       <div class="passo" id="passo-9"> 
-       <p>No Amazonas, a busca pela cidade perdida se intensifica. Você se depara com um rio bifurcado.</p>
-       <button class="btn-proximo" data-proximo="11" >SEGUIR RIO PELA ESQUERDA</button> 
+       <p>Você conta toda a sua trajetória até aqui e ele não parece surpreso.</p>
+       <p>Ele diz que a escola estava elaborando projetos de viagem no tempo e que isso poderia acontecer. Ele te apresenta a um professor responsável pela situação.</p>
+       <button class="btn-proximo" data-proximo="passo-flecha1" >🡻</button>
+      </div>
+
+      <div class="passo" id="10"> 
+       <p>Ele expressa uma reação indiferente e diz que você poderia ter falado com os robõs professores que ficam nos corredores.</p>
+       <p>Apesar disso, ele te leva à primeira aula do dia, mas diz que tinha outros assuntos para resolver e vai embora, te deixando sozinha (o).</p>
+       <button class="btn-proximo" data-proximo="passo-11" >🡻</button>
       </div>
 
           <div class="passo" id="passo-7"> 
@@ -82,23 +94,125 @@
        <button class="btn-proximo" data-proximo="12" >NÃO</button>
       </div>
       
+
+
+       <!-- Falta a história do passo 18 no fluxograma-->
              <div class="passo" id="passo-11"> 
        <p>Iara entra furtivamente no que parece ser uma aula de história, o holograma mostrava fatos históricos como se acontecessem ali naquele espaço. Iara nunca imaginou ver algo assim com os seus próprios olhos</p>
+      <button class="btn-proximo" data-proximo="passo-17">ADMITIR QUE VEIO DO PASSADO</button>
+       <button class="btn-proximo" data-proximo="passo-18">FALAR QUE FOI A REVOLTA DAS MÁQUINAS</button>
+      </div>
+
+       <div class="passo" id="passo-flecha5"> 
+       <p>Durante a aula, o professor faz uma pergunta diretamente à você sobre o que deu início a guerra cibernética de 2109 que, para o seu azar, aconteceu 83 anos depois da realidade que você deixou após entrar no portal.</p>
+      <button class="btn-proximo" data-proximo="passo-flecha5">🡻</button>
       </div>
       
 
       <div class="passo" id="passo-12"> 
-       <p>Iara passa reto daquela sala com mais coisas estranhas dessa nova realidade. Ela (e) se pergunta o que teria acontecido se entrassse.</p>
+       <p>Andando por aqueles corredores, Iara se depara com uma aula acontecendo</p>
+        <p> Ao lado de um robô com o seu interior aberto, um professor explicava o funcionamento e a programação desses robôs inteligentes que limpavam a escola e ajudavam os alunos.</p>
+       <button class="btn-proximo" data-proximo="passo-15" >ENTRAR FURTIVAMENTE</button>
+           <button class="btn-proximo" data-proximo="passo-16" >PASSAR RETO</button>
+      </div>
+
+      <div class="passo" id="passo-17"> 
+       <p>O professor e os alunos parecem surpresos, não por você ter vindo do passado, mas sim por Iara estar infiltrada (o) na aula.</p>
+       <button class="btn-proximo" data-proximo="passo-flecha1" >🡻</button>
       </div>
       
       <div class="passo" id="passo-8"> 
-       <p>Alguns estudantes a fazem diversas perguntas, outros tentam ajudá-la, até que um professor se aproxima.</p> 
-<p>O professor diz que a escola estava lhe esperando, mas não daquele jeito</p>
-        <P>O professor diz que a escola estava buscando meios de realizar viagem no tempo para se comunicar com alguém no passado, mas o portal acabou abrindo em um local inesperado</P>
-        <P>ACOMPANHA-LO?</P>
-           <button class="btn-proximo" data-proximo="10" >NÃO</button>
-              <button class="btn-proximo" data-proximo="14" >SIM</button>
+        <p>Alguns estudantes a fazem diversas perguntas, outros tentam ajudá-la, até que um professor se aproxima.</p>
+        <p>O professor diz que a escola estava lhe esperando, mas não daquele jeito</p>
+           <button class="btn-proximo" data-proximo="passo-flecha1" >🡻</button>
       </div>
+
+      <div class="passo" id="passo-flecha1">
+        <p>O professor explica que a escola estava buscando meios de realizar viagem no tempo para se comunicar com alguém do passado, mas o portal acabou abrindo em um local inesperado</p>
+           <button class="btn-proximo" data-proximo="passo-13" >ESCAPAR DELE</button>
+           <button class="btn-proximo" data-proximo="passo-14" >SEGUIR COM O PROFESSOR</button>
+      </div>
+
+      <div class="passo" id="passo-13">
+        <p>Você diz que precisa ir ao banheiro e aproveita a oportunidade para escapar daquela situação.</p>
+           <button class="btn-proximo" data-proximo="passo-flecha2" >🡻</button>
+      </div>
+
+       <div class="passo" id="passo-flecha2">
+        <p>Andando por aqueles corredores, Iara se depara com uma aula acontecendo. </p>
+        <p> Ao lado de um robô com o seu interior aberto, um professor explicava o funcionamento e a programação desses robôs inteligentes que limpavam a escola e ajudavam os alunos.</p>
+           <button class="btn-proximo" data-proximo="passo-15" >ENTRAR FURTIVAMENTE</button>
+           <button class="btn-proximo" data-proximo="passo-16" >PASSAR RETO</button>
+      </div>
+
+          <div class="passo" id="passo-15">
+        <p>Você senta em uma carteira vazia nos fundos e ninguém parece se importar com sua presença. </p>
+        <p>Você acompanha a aula e descobre a tecnologia fascinante daquele universo, se perguntando se poderia levar aquelas informações para a realidade de onde veio. </p>
+           <button class="btn-proximo" data-proximo="passo-flecha3" >🡻</button>
+      </div>
+
+      <div class="passo" id="passo-flecha3">
+        <p>Ao sair do local, um professor ofegante por correr para te alcançar te aborda, dizendo que precisava te dizer algo importante. </p>
+           <button class="btn-proximo" data-proximo="passo-flecha4" >🡻</button>
+      </div>
+
+      <div class="passo" id="passo-flecha4">
+        <p>Ao sair do local, um professor ofegante por correr para te alcançar te aborda, dizendo que precisava te dizer algo importante. </p>
+           <button class="btn-proximo" data-proximo="passo-flecha1" >🡻</button>
+      </div>
+
+      <div class="passo" id="passo-16">
+        <p>Iara percebe uma forte luz azul vindo da entrada do banheiro e decide checar. </p>
+         <p>Ao chegar lá, se depara com o mesmo portal de antes. Você acredita ser o portal que te levará para a realidade de onde veio.</p>
+           <button class="btn-proximo" data-proximo="passo-flecha4" >SAIR DO BANHEIRO</button>
+           <button class="btn-proximo" data-proximo="passo-20" >ENTRAR</button>
+      </div>
+
+        <div class="passo" id="passo-20">
+        <p>Iara passa por aquelas mesmas sensações bizarras de atravessar o portal.</p>
+         <p>Mas, agora, o que você vê é aquela antiga escola de novo.</p>
+      </div>
+
+         <div class="passo" id="passo-14">
+        <p>Ele te leva a uma sala que conta com a presença de físicos e engenheiros. O professor diz que o que eles tem para falar é de extrema importância</p>
+      <button class="btn-proximo" data-proximo="passo-flecha6" >🡻</button>
+      </div>
+
+       <div class="passo" id="passo-flecha6">
+        <p>Iara sabe que, da realidade em que veio, as mudanças climáticas já afetam gravemente os ecossistemas e a população, mas nunca pensou que chegaria nesse estado tão rápido.</p>
+      <button class="btn-proximo" data-proximo="passo-flecha7" >🡻</button>
+      </div>
+
+       <div class="passo" id="passo-flecha7">
+        <p>O que você fará?</p>
+      <button class="btn-proximo" data-proximo="passo-final1" >ACEITAR O FARDO</button>
+       <button class="btn-proximo" data-proximo="passo-final2" >DESISTIR</button>
+      </div>
+
+      <div class="passo" id="passo-final1">
+        <p>Os especialistas parecem aliviados. Eles te entregam os materiais necessários e preparam a sua volta para casa.
+Aquele portal que Iara viu no início de sua jornada reaparece, mas, agora, você está completamente diferente de como entrou. Sua missão é grande e você está disposta (o) em ajudar a salvar o mundo.</p>
+      <button class="btn-proximo" data-proximo="passo-flecha8" >🡻</button>
+      </div>
+
+      <div class="passo" id="passo-final2">
+        <p>Os especialistas parecem decepcionados e até um pouco desesperados. Eles dizem que entendem o seu lado e começam a preparar a sua volta para casa. 
+O portal que você viu no início de sua jornada reaparece e sua consciência lentamente começa a pesar.</p>
+      <button class="btn-proximo" data-proximo="passo-flecha8" >🡻</button>
+      </div>
+
+
+       <div class="passo" id="passo-flecha8">
+        <p>Iara passa por aquelas mesmas sensações estranhas de atravessar o portal. Agora, o que você vê é aquela antiga escola de novo.</p>
+      </div>
+
+
+
+
+
+
+
+
 
      </main>
      <script src="script.js"></script>
