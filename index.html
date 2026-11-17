@@ -38,9 +38,19 @@
       <div class="passo" id="passo-0">
          <img src="cenario-passo0.jpg" alt="Corredor da escola onde começa a aventura">
            <p> Era uma manhã comum. A escola estava cheia de alunos, conversas pelos corredores e professores correndo para chegar às salas. Tudo parecia seguir a mesma rotina de sempre. </p>
-           <p> {{nickname}} caminhava pelo corredor, esperando o início da próxima aula, quando percebeu que precisava ir ao banheiro. Ao entrar, por alguns segundos, tudo permaneceu normal. </p>
-           <button class="btn-proximo" data-proximo="1" >🢂</button>
+           <p> {{nickname}} caminhava pelo corredor, esperando o início da próxima aula, quando percebeu que precisava ir ao banheiro. No caminho, notou um brilho azul perto da porta, mas ele desapareceu em um instante.</p>
+           <button class="btn-proximo" data-proximo="1">IR AO BANHEIRO</button>
+           <button class="btn-proximo" data-proximo="passo-22">CHAMAR A INSPETORA</button>
+           <button class="btn-proximo" data-proximo="passo-25">VOLTAR PARA A SALA</button>
       </div> 
+
+      <div class="passo" id="passo-25">
+        <p>No caminho de volta para a sala, uma luz azul surge no corredor. O chão parece desaparecer e, num instante, você cai em uma escola muito diferente, cercada por estudantes.</p>
+        <p>O que você faz?</p>
+        <button class="btn-proximo" data-proximo="passo-7">EXPLORAR A ESCOLA</button>
+        <button class="btn-proximo" data-proximo="passo-04">PEDIR ORIENTAÇÃO</button>
+        <button class="btn-proximo" data-proximo="passo-03">FALAR COM OS ESTUDANTES</button>
+      </div>
 
       <div class="passo" id="passo-1">
         <img src="banheiro.portal-passo-1.png" class="imagem-pequena" alt="Um portal misterioso aparece no banheiro">
@@ -49,6 +59,7 @@
           <p> ENTRAR? </p>
             <button class="btn-proximo" data-proximo="2" >SIM</button>
             <button class="btn-proximo" data-proximo="3" >NÃO</button>
+            <button class="btn-proximo" data-proximo="passo-22" >CHAMAR ALGUÉM</button>
       </div>
 
        
@@ -59,23 +70,39 @@
             <p> O novo lugar parecia como sua escola antiga, mas tinha algo diferente.</p>
       
      <button class="btn-proximo" data-proximo="04" >PERGUNTAR A ALGUÉM</button>
-     <button class="btn-proximo" data-proximo="05" >VOLTAR DE ONDE VEIO</button>
+     <button class="btn-proximo" data-proximo="5" >VOLTAR DE ONDE VEIO</button>
      <button class="btn-proximo" data-proximo="7" >EXPLORAR POR CONTA PRÓPRIA</button>
 
       </div>
       
 
+       <div class="passo game-over" id="passo-22">
+        <h2>Game over: o portal desapareceu</h2>
+        <p>Você chama a inspetora e conta sobre o brilho azul. Ela vai até o banheiro com você, mas, quando chegam, o portal já desapareceu. Sem pistas sobre o que aconteceu, o dia continua como se nada tivesse mudado — mas a aventura termina antes mesmo de começar.</p>
+        <button class="btn-proximo" data-proximo="passo-creditos">VER CRÉDITOS</button>
+        <button class="btn-proximo" type="button" data-reiniciar>JOGAR NOVAMENTE</button>
+        <button class="btn-proximo" data-proximo="passo-1">TENTAR DE NOVO</button>
+       </div>
 
-      <div class="passo" id="5">
+
+
+      <div class="passo game-over" id="passo-5">
+        <h2>Game over: voltar cedo demais</h2>
         <img src="queda.jpg" alt="{{nickname}} cai através do portal">
-       <p> {{nickname}} decide que a aventura é grande demais e volta para casa, mas sempre se pergunta o que teria encontrado.</p>      </div>
+       <p>{{nickname}} escolhe voltar antes de descobrir o que existe do outro lado. O portal se fecha e a vida segue normalmente, mas a chance de ajudar a mudar o futuro se perde. A aventura termina aqui.</p>
+       <button class="btn-proximo" data-proximo="passo-creditos">VER CRÉDITOS</button>
+       <button class="btn-proximo" type="button" data-reiniciar>JOGAR NOVAMENTE</button>
+       <button class="btn-proximo" data-proximo="passo-2">REFAZER A ESCOLHA</button>
+      </div>
       
 
       <div class="passo" id="passo-3">
         <img src="queda.jpg" alt="{{nickname}} cai através do portal">
        <p> {{nickname}} dá de ombros e vai em direção à saída do banheiro. Quando já parecia ter escapado de uma situação anormal, o portal se abre logo abaixo de seus pés.</p>
       <P>{{nickname}} cai em queda livre para dentro do portal, seu corpo inteiro formiga e seu estômago começa a embrulhar.</p>
-      <button class="btn-proximo" data-proximo="03" >🡻</button>
+      <button class="btn-proximo" data-proximo="03">SEGUIR PELO CORREDOR</button>
+      <button class="btn-proximo" data-proximo="8">CHAMAR OS ESTUDANTES</button>
+      <button class="btn-proximo" data-proximo="23">ESPERAR ALGUÉM SE APROXIMAR</button>
       </div>
 
       <div class="passo" id="passo-03"> 
@@ -83,6 +110,23 @@
        <p> Quando se dá conta, {{identidade}} está no meio de um corredor escolar lotado. Algumas pessoas olham com espanto; outras correm para conversar.</p>
        <button class="btn-proximo" data-proximo="7" >FUGIR</button>
        <button class="btn-proximo" data-proximo="8" >CONVERSAR</button>
+       <button class="btn-proximo" data-proximo="23" >PERMANECER PARADO</button>
+      </div>
+
+
+      <div class="passo" id="passo-23">
+       <p>{{nickname}} permanece sem reação, até um professor passar pelos estudantes e se aproximar. Ele pergunta se está tudo bem e diz que precisa conversar.</p>
+       <button class="btn-proximo" data-proximo="passo-13" >ESCAPAR DELE</button>
+        <button class="btn-proximo" data-proximo="passo-14" >SEGUIR COM O PROFESSOR</button>
+         <button class="btn-proximo" data-proximo="passo-24" >PERGUNTAR O MOTIVO</button>
+      </div>
+
+      <div class="passo" id="passo-24">
+        <p>O professor explica que a escola está investigando uma anomalia no tempo. Ele não sabe exatamente de onde você veio, mas promete contar tudo se você o acompanhar até uma sala segura.</p>
+        <p>Você pode ouvir a explicação, tentar voltar por conta própria ou seguir o professor até os pesquisadores.</p>
+        <button class="btn-proximo" data-proximo="passo-flecha1">OUVIR A EXPLICAÇÃO</button>
+        <button class="btn-proximo" data-proximo="passo-13">TENTAR VOLTAR POR CONTA PRÓPRIA</button>
+        <button class="btn-proximo" data-proximo="passo-14">IR À SALA DOS PESQUISADORES</button>
       </div>
       
       
@@ -91,24 +135,25 @@
        <p> Enquanto andava procurando alguém para perguntar aonde estava, {{nickname}} percebe que robôs fazem a limpeza da escola e telas grudadas nas paredes mostram o horário de aulas..</p>
        <p> {{nickname}} avista um aluno em cima de um skate voador conversando com um robô vestido de professor e decide falar com o menino.</p>
        <button class="btn-proximo" data-proximo="9" >FALAR QUE VEIO DO PASSADO</button>
-       <button class="btn-proximo" data-proximo="10" >MENTIR FALANDO QUE É ALUNA NOVA</button>
-      </div>
-
-      <div class="passo" id="passo-05"> 
-       <p> {{nickname}} decide que a aventura é grande demais e volta para casa, mas sempre se pergunta o que teria encontrado.</p>
+       <button class="btn-proximo" data-proximo="10">DIZER QUE ACABOU DE CHEGAR</button>
+       <button class="btn-proximo" data-proximo="7" >IGNORAR ELE</button>
       </div>
 
         <!-- alterar o cenério nessa parte -->
       <div class="passo" id="passo-9"> 
-       <p>Você conta toda a sua trajetória até aqui e ele não parece surpreso.</p>
-       <p>Ele diz que a escola estava elaborando projetos de viagem no tempo e que isso poderia acontecer. Ele te apresenta a um professor responsável pela situação.</p>
-       <button class="btn-proximo" data-proximo="passo-flecha1" >🡻</button>
+       <p>O aluno não parece surpreso ao ouvir que você veio do passado. Ele conta que a escola pesquisa viagens no tempo e se oferece para ajudar.</p>
+       <p>Como você quer prosseguir?</p>
+       <button class="btn-proximo" data-proximo="passo-flecha1">CONVERSAR COM O PROFESSOR</button>
+       <button class="btn-proximo" data-proximo="passo-24">PERGUNTAR SOBRE A ANOMALIA</button>
+       <button class="btn-proximo" data-proximo="passo-16">PROCURAR O BANHEIRO</button>
       </div>
 
-      <div class="passo" id="10"> 
+      <div class="passo" id="passo-10">
        <p>Ele expressa uma reação indiferente e diz que você poderia ter falado com os robõs professores que ficam nos corredores.</p>
        <p>Apesar disso, ele te leva à primeira aula do dia, mas diz que tem outros assuntos para resolver e vai embora, deixando você por conta própria.</p>
-       <button class="btn-proximo" data-proximo="passo-11" >🡻</button>
+       <button class="btn-proximo" data-proximo="passo-11">ENTRAR NA AULA</button>
+       <button class="btn-proximo" data-proximo="passo-12">PERGUNTAR AO ROBÔ PROFESSOR</button>
+       <button class="btn-proximo" data-proximo="passo-7">EXPLORAR A ESCOLA</button>
       </div>
 
           <div class="passo" id="passo-7"> 
@@ -117,6 +162,7 @@
        <p> ENTRAR?</p>
        <button class="btn-proximo" data-proximo="11" >SIM</button> 
        <button class="btn-proximo" data-proximo="12" >NÃO</button>
+       <button class="btn-proximo" data-proximo="passo-04">PEDIR AJUDA AO ALUNO</button>
       </div>
       
 
@@ -126,11 +172,15 @@
        <p>{{nickname}} entra furtivamente no que parece ser uma aula de história, o holograma mostrava fatos históricos como se acontecessem ali naquele espaço. {{nickname}} nunca imaginou ver algo assim com os seus próprios olhos</p>
       <button class="btn-proximo" data-proximo="passo-17">ADMITIR QUE VEIO DO PASSADO</button>
        <button class="btn-proximo" data-proximo="passo-18">FALAR QUE FOI A REVOLTA DAS MÁQUINAS</button>
+       <button class="btn-proximo" data-proximo="passo-16">SAIR SEM SER NOTADO</button>
       </div>
 
        <div class="passo" id="passo-flecha5"> 
-       <p>Durante a aula, o professor faz uma pergunta diretamente à você sobre o que deu início a guerra cibernética de 2109 que, para o seu azar, aconteceu 83 anos depois da realidade que você deixou após entrar no portal.</p>
-      <button class="btn-proximo" data-proximo="passo-flecha5">🡻</button>
+        <p>Durante a aula, o professor pergunta o que deu início à guerra cibernética de 2109 — um conflito que aconteceu 83 anos depois da época de onde você veio.</p>
+        <p>Você não conhece a resposta. O que fará?</p>
+        <button class="btn-proximo" data-proximo="passo-game-over-mentira">INVENTAR UMA RESPOSTA</button>
+        <button class="btn-proximo" data-proximo="passo-17">ADMITIR QUE NÃO SABE</button>
+        <button class="btn-proximo" data-proximo="passo-flecha1">PEDIR AJUDA AO PROFESSOR</button>
       </div>
       
 
@@ -139,28 +189,59 @@
         <p> Ao lado de um robô com o seu interior aberto, um professor explicava o funcionamento e a programação desses robôs inteligentes que limpavam a escola e ajudavam os alunos.</p>
        <button class="btn-proximo" data-proximo="passo-15" >ENTRAR FURTIVAMENTE</button>
            <button class="btn-proximo" data-proximo="passo-16" >PASSAR RETO</button>
+           <button class="btn-proximo" data-proximo="passo-26">PERGUNTAR AO PROFESSOR SOBRE OS ROBÔS</button>
+      </div>
+
+      <div class="passo" id="passo-26">
+        <p>O professor explica que aqueles robôs ajudam nas tarefas da escola e convida você a conhecer melhor a tecnologia. A conversa também revela que os pesquisadores estão trabalhando em projetos importantes.</p>
+        <button class="btn-proximo" data-proximo="passo-15">ASSISTIR À AULA</button>
+        <button class="btn-proximo" data-proximo="passo-14">CONHECER OS PESQUISADORES</button>
+        <button class="btn-proximo" data-proximo="passo-16">PROCURAR O PORTAL</button>
       </div>
 
       <div class="passo" id="passo-17"> 
        <p>O professor e os alunos parecem surpresos, não por você ter vindo do passado, mas por você ter entrado na aula sem avisar.</p>
-       <button class="btn-proximo" data-proximo="passo-flecha1" >🡻</button>
+       <button class="btn-proximo" data-proximo="passo-flecha1">CONTAR TODA A VERDADE</button>
+       <button class="btn-proximo" data-proximo="passo-8">PEDIR DESCULPAS E CONVERSAR</button>
+       <button class="btn-proximo" data-proximo="passo-16">SAIR DA SALA</button>
+      </div>
+
+      <div class="passo" id="passo-18">
+        <p>Você afirma que a revolta das máquinas iniciou a guerra cibernética. O professor consulta os registros históricos e percebe que essa revolta aconteceu décadas depois do conflito.</p>
+        <p>Ele não parece bravo, mas espera que você explique como sabe tanto sobre o futuro.</p>
+        <button class="btn-proximo" data-proximo="passo-17">CONTAR A VERDADE</button>
+        <button class="btn-proximo" data-proximo="passo-flecha5">TENTAR RESPONDER À PERGUNTA</button>
+        <button class="btn-proximo" data-proximo="passo-16">SAIR DA SALA</button>
+      </div>
+
+      <div class="passo game-over" id="passo-game-over-mentira">
+        <h2>Game over: uma mentira sem saída</h2>
+        <p>Você inventa uma resposta, mas os registros históricos mostram que ela está errada. Sem conseguir explicar sua história, perde a confiança do professor e a chance de chegar aos especialistas. A aventura termina sem uma forma de voltar para casa.</p>
+        <button class="btn-proximo" data-proximo="passo-creditos">VER CRÉDITOS</button>
+        <button class="btn-proximo" type="button" data-reiniciar>JOGAR NOVAMENTE</button>
+        <button class="btn-proximo" data-proximo="passo-flecha5">TENTAR RESPONDER DE NOVO</button>
       </div>
       
       <div class="passo" id="passo-8"> 
         <p>Alguns estudantes fazem diversas perguntas, outras pessoas tentam ajudar, até que um professor se aproxima.</p>
         <p>O professor diz que a escola estava lhe esperando, mas não daquele jeito</p>
-           <button class="btn-proximo" data-proximo="passo-flecha1" >🡻</button>
+        <button class="btn-proximo" data-proximo="passo-flecha1">OUVIR O PROFESSOR</button>
+        <button class="btn-proximo" data-proximo="passo-24">ACEITAR A AJUDA DOS ESTUDANTES</button>
+        <button class="btn-proximo" data-proximo="passo-16">IR ATÉ O BANHEIRO</button>
       </div>
 
       <div class="passo" id="passo-flecha1">
         <p>O professor explica que a escola estava buscando meios de realizar viagem no tempo para se comunicar com alguém do passado, mas o portal acabou abrindo em um local inesperado</p>
            <button class="btn-proximo" data-proximo="passo-13" >ESCAPAR DELE</button>
            <button class="btn-proximo" data-proximo="passo-14" >SEGUIR COM O PROFESSOR</button>
+           <button class="btn-proximo" data-proximo="passo-16">PERGUNTAR COMO VOLTAR</button>
       </div>
 
       <div class="passo" id="passo-13">
         <p>Você diz que precisa ir ao banheiro e aproveita a oportunidade para escapar daquela situação.</p>
-           <button class="btn-proximo" data-proximo="passo-flecha2" >🡻</button>
+        <button class="btn-proximo" data-proximo="passo-flecha2">SEGUIR PELOS CORREDORES</button>
+        <button class="btn-proximo" data-proximo="passo-16">IR DIRETO AO BANHEIRO</button>
+        <button class="btn-proximo" data-proximo="passo-12">ENTRAR EM UMA AULA</button>
       </div>
 
        <div class="passo" id="passo-flecha2">
@@ -168,22 +249,29 @@
         <p> Ao lado de um robô com o seu interior aberto, um professor explicava o funcionamento e a programação desses robôs inteligentes que limpavam a escola e ajudavam os alunos.</p>
            <button class="btn-proximo" data-proximo="passo-15" >ENTRAR FURTIVAMENTE</button>
            <button class="btn-proximo" data-proximo="passo-16" >PASSAR RETO</button>
+           <button class="btn-proximo" data-proximo="passo-14">FALAR COM O PROFESSOR</button>
       </div>
 
           <div class="passo" id="passo-15">
         <p>Você senta em uma carteira vazia nos fundos e ninguém parece se importar com sua presença. </p>
         <p>Você acompanha a aula e descobre a tecnologia fascinante daquele universo, se perguntando se poderia levar aquelas informações para a realidade de onde veio. </p>
-           <button class="btn-proximo" data-proximo="passo-flecha3" >🡻</button>
+        <button class="btn-proximo" data-proximo="passo-flecha3">OUVIR O PROFESSOR</button>
+        <button class="btn-proximo" data-proximo="passo-7">EXPLORAR OUTRA SALA</button>
+        <button class="btn-proximo" data-proximo="passo-16">PROCURAR O PORTAL</button>
       </div>
 
       <div class="passo" id="passo-flecha3">
-        <p>Ao sair do local, um professor ofegante por correr para te alcançar te aborda, dizendo que precisava te dizer algo importante. </p>
-           <button class="btn-proximo" data-proximo="passo-flecha4" >🡻</button>
+        <p>Ao sair da aula, um professor ofegante consegue te alcançar. Ele diz que os pesquisadores precisam falar com você sobre a viagem no tempo.</p>
+        <button class="btn-proximo" data-proximo="passo-flecha4">ESPERAR E OUVIR</button>
+        <button class="btn-proximo" data-proximo="passo-flecha1">PERGUNTAR O QUE ACONTECEU</button>
+        <button class="btn-proximo" data-proximo="passo-15">VOLTAR PARA A AULA</button>
       </div>
 
       <div class="passo" id="passo-flecha4">
-        <p>Ao sair do local, um professor ofegante por correr para te alcançar te aborda, dizendo que precisava te dizer algo importante. </p>
-           <button class="btn-proximo" data-proximo="passo-flecha1" >🡻</button>
+        <p>O professor explica que a escola tentou abrir um portal para se comunicar com alguém do passado, mas a passagem surgiu no banheiro por acidente. Ele quer te levar até a equipe responsável.</p>
+        <button class="btn-proximo" data-proximo="passo-flecha1">OUVIR A EXPLICAÇÃO</button>
+        <button class="btn-proximo" data-proximo="passo-17">CONTAR QUE VEIO DO PASSADO</button>
+        <button class="btn-proximo" data-proximo="passo-16">SAIR EM DIREÇÃO AO BANHEIRO</button>
       </div>
 
       <div class="passo" id="passo-16">
@@ -191,45 +279,83 @@
          <p>Ao chegar lá, se depara com o mesmo portal de antes. Você acredita ser o portal que te levará para a realidade de onde veio.</p>
            <button class="btn-proximo" data-proximo="passo-flecha4" >SAIR DO BANHEIRO</button>
            <button class="btn-proximo" data-proximo="passo-20" >ENTRAR</button>
+           <button class="btn-proximo" data-proximo="passo-22">CHAMAR A INSPETORA</button>
       </div>
 
         <div class="passo" id="passo-20">
         <p>{{nickname}} passa por aquelas mesmas sensações bizarras de atravessar o portal.</p>
-         <p>Mas, agora, o que você vê é aquela antiga escola de novo.</p>
+         <p>Mas, agora, o que você vê é aquela antiga escola de novo. Você voltou para casa com segurança, embora ainda não saiba por que o portal apareceu.</p>
+         <button class="btn-proximo" data-proximo="passo-creditos">VER CRÉDITOS</button>
+         <button class="btn-proximo" type="button" data-reiniciar>JOGAR NOVAMENTE</button>
+         <button class="btn-proximo" data-proximo="passo-1">INVESTIGAR O PORTAL DE NOVO</button>
       </div>
 
          <div class="passo" id="passo-14">
         <p>Ele te leva a uma sala que conta com a presença de físicos e engenheiros. O professor diz que o que eles tem para falar é de extrema importância</p>
-      <button class="btn-proximo" data-proximo="passo-flecha6" >🡻</button>
+        <button class="btn-proximo" data-proximo="passo-flecha6">OUVIR SOBRE A CRISE</button>
+        <button class="btn-proximo" data-proximo="passo-flecha7">PERGUNTAR COMO AJUDAR</button>
+        <button class="btn-proximo" data-proximo="passo-13">PEDIR UM TEMPO PARA PENSAR</button>
       </div>
 
        <div class="passo" id="passo-flecha6">
         <p>{{nickname}} sabe que, da realidade em que veio, as mudanças climáticas já afetam gravemente os ecossistemas e a população, mas nunca pensou que chegaria nesse estado tão rápido.</p>
-      <button class="btn-proximo" data-proximo="passo-flecha7" >🡻</button>
+        <button class="btn-proximo" data-proximo="passo-flecha7">OUVIR O PLANO DOS ESPECIALISTAS</button>
+        <button class="btn-proximo" data-proximo="passo-final2">DESISTIR E VOLTAR PARA CASA</button>
+        <button class="btn-proximo" data-proximo="passo-16">SAIR PARA PENSAR</button>
       </div>
 
        <div class="passo" id="passo-flecha7">
-        <p>O que você fará?</p>
-      <button class="btn-proximo" data-proximo="passo-final1" >ACEITAR O FARDO</button>
-       <button class="btn-proximo" data-proximo="passo-final2" >DESISTIR</button>
+        <h2>A decisão final</h2>
+        <p>Os especialistas explicam que ainda há tempo para agir, mas precisam da sua ajuda. O portal está quase estável. Você só pode escolher um caminho.</p>
+        <button class="btn-proximo" data-proximo="passo-final1">ACEITAR A MISSÃO E VOLTAR</button>
+        <button class="btn-proximo" data-proximo="passo-final2">VOLTAR PARA CASA SEM OS MATERIAIS</button>
+        <button class="btn-proximo" data-proximo="passo-final3">FICAR NO FUTURO E AJUDAR</button>
       </div>
 
       <div class="passo" id="passo-final1">
-        <p>Os especialistas parecem aliviados. Eles te entregam os materiais necessários e preparam a sua volta para casa.
-Aquele portal que {{nickname}} viu no início de sua jornada reaparece, mas, agora, você está completamente diferente de como entrou. Sua missão é grande e você tem determinação para ajudar a salvar o mundo.</p>
-      <button class="btn-proximo" data-proximo="passo-flecha8" >🡻</button>
+        <h2>Final: uma missão para o presente</h2>
+        <p>Os especialistas entregam a você os registros e as descobertas que podem ajudar a evitar a crise. O portal se abre, e você volta à sua época levando consigo uma mensagem clara: o futuro ainda pode mudar.</p>
+        <p>De volta à escola, você compartilha o que aprendeu. No começo, poucas pessoas acreditam, mas você não desiste. Professores e estudantes se juntam para pesquisar, reduzir desperdícios e cuidar do ambiente. A mudança não acontece de um dia para o outro, mas agora existe um plano — e ninguém precisa enfrentar isso sem apoio.</p>
+        <button class="btn-proximo" data-proximo="passo-flecha8">VER O DESFECHO</button>
+        <button class="btn-proximo" data-proximo="passo-creditos">IR AOS CRÉDITOS</button>
+        <button class="btn-proximo" type="button" data-reiniciar>JOGAR NOVAMENTE</button>
       </div>
 
-      <div class="passo" id="passo-final2">
-        <p>Os especialistas parecem decepcionados e até um pouco desesperados. Eles dizem que entendem o seu lado e começam a preparar a sua volta para casa. 
-O portal que você viu no início de sua jornada reaparece e sua consciência lentamente começa a pesar.</p>
-      <button class="btn-proximo" data-proximo="passo-flecha8" >🡻</button>
+      <div class="passo game-over" id="passo-final2">
+        <h2>Game over: o futuro esquecido</h2>
+        <p>Os especialistas respeitam sua decisão e abrem o portal para você voltar. Sem os registros e sem alguém que leve o aviso ao passado, o projeto fica parado. Anos depois, a crise se agrava e a oportunidade de agir se perde.</p>
+        <p>Você chega em casa em segurança, mas sabe que a história poderia ter tomado outro rumo.</p>
+        <button class="btn-proximo" data-proximo="passo-creditos">VER CRÉDITOS</button>
+        <button class="btn-proximo" type="button" data-reiniciar>JOGAR NOVAMENTE</button>
+        <button class="btn-proximo" data-proximo="passo-flecha7">TENTAR OUTRA ESCOLHA</button>
       </div>
 
+      <div class="passo" id="passo-final3">
+        <h2>Final alternativo: construir o futuro</h2>
+        <p>Você decide ficar. Com a ajuda dos especialistas, transforma as descobertas em um projeto aberto para toda a escola. Estudantes, professores e comunidades próximas aprendem a monitorar os ecossistemas e a recuperar áreas afetadas.</p>
+        <p>O trabalho é longo, mas cada geração acrescenta algo. Você não volta para a sua época, porém ajuda a criar um futuro em que as próximas pessoas terão mais escolhas e mais esperança.</p>
+        <button class="btn-proximo" data-proximo="passo-creditos">VER CRÉDITOS</button>
+        <button class="btn-proximo" type="button" data-reiniciar>JOGAR NOVAMENTE</button>
+        <button class="btn-proximo" data-proximo="passo-flecha7">VER OUTRA POSSIBILIDADE</button>
+      </div>
 
        <div class="passo" id="passo-flecha8">
-        <p>{{nickname}} passa por aquelas mesmas sensações estranhas de atravessar o portal. Agora, o que você vê é aquela antiga escola de novo.</p>
+        <h2>O futuro começa agora</h2>
+        <p>{{nickname}} atravessa o portal mais uma vez e retorna à antiga escola. A aventura termina, mas a missão continua: pequenas escolhas feitas em conjunto podem mudar o futuro.</p>
+        <button class="btn-proximo" data-proximo="passo-creditos">VER CRÉDITOS</button>
+        <button class="btn-proximo" type="button" data-reiniciar>JOGAR NOVAMENTE</button>
+        <button class="btn-proximo" data-proximo="passo-final3">VER OUTRO FINAL</button>
       </div>
+
+      <section class="passo creditos" id="passo-creditos" aria-labelledby="titulo-creditos">
+        <h2 id="titulo-creditos">Créditos</h2>
+        <p>Jogo e história</p>
+        <p>Marcos G. e Maria R.</p>
+        <p>Obrigado por jogar!</p>
+        <button class="btn-proximo" type="button" data-reiniciar>JOGAR NOVAMENTE</button>
+        <button class="btn-proximo" data-proximo="passo-flecha8">VER FINAL PRINCIPAL</button>
+        <button class="btn-proximo" data-proximo="passo-final3">VER FINAL ALTERNATIVO</button>
+      </section>
 
 
 

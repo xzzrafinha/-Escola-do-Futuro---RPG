@@ -24,8 +24,8 @@ formNickname.addEventListener('submit', event => {
 
         while ((texto = walker.nextNode())) {
             texto.textContent = texto.textContent
-                .replaceAll('{{nickname}}', nickname)
-                .replaceAll('{{identidade}}', identidade);
+                .replaceAll('{{identidade}}', identidade)
+                .replaceAll('{{nickname}}', nickname);
         }
 
         passo.querySelectorAll('img[alt]').forEach(imagem => {
@@ -53,3 +53,7 @@ avanca.forEach(button => {
         document.getElementById(proximoPasso).classList.add('ativo');
     })
 })
+
+document.querySelectorAll('[data-reiniciar]').forEach(button => {
+    button.addEventListener('click', () => window.location.reload());
+});

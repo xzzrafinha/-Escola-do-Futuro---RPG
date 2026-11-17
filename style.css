@@ -65,6 +65,19 @@ main {
     animation: aparecer 320ms ease-out both;
 }
 
+.passo.game-over {
+    border-color: rgba(255, 112, 112, 0.55);
+    background: linear-gradient(145deg, rgba(66, 29, 42, 0.96), rgba(32, 24, 42, 0.98));
+}
+
+.passo.game-over h2 {
+    color: #ffb1b1;
+}
+
+.passo.creditos p {
+    margin-bottom: 0.5rem;
+}
+
 .passo p {
     max-width: 68ch;
     margin: 0 auto 1rem;
