@@ -78,6 +78,161 @@ main {
     margin-bottom: 0.5rem;
 }
 
+.intro-screen {
+    display: none;
+}
+
+.intro-screen.ativo {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(260px, 0.9fr);
+    align-items: center;
+    gap: clamp(24px, 5vw, 56px);
+    min-height: 440px;
+    padding: clamp(28px, 6vw, 64px);
+    text-align: left;
+    background:
+        radial-gradient(ellipse at 86% 16%, rgba(57, 224, 222, 0.12), transparent 19rem),
+        linear-gradient(145deg, rgba(20, 43, 66, 0.97), rgba(8, 24, 42, 0.98));
+}
+
+.intro-copy {
+    position: relative;
+    z-index: 1;
+}
+
+.passo .intro-kicker {
+    margin-bottom: 0.7rem;
+    color: #79e5e8;
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+}
+
+.passo .intro-copy h2 {
+    max-width: 13ch;
+    margin-bottom: 1rem;
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    line-height: 1.08;
+    text-align: left;
+}
+
+.passo .intro-description {
+    max-width: 38ch;
+    margin: 0 0 1.6rem;
+    color: #b8d5e8;
+    font-size: 1rem;
+    line-height: 1.65;
+    text-align: left;
+}
+
+.intro-gallery {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 0.68fr;
+    grid-template-rows: 1fr 0.8fr;
+    gap: 12px;
+    width: 100%;
+    min-height: 300px;
+    padding: 12px;
+    border: 1px solid rgba(121, 229, 232, 0.22);
+    border-radius: 22px;
+    background: rgba(4, 16, 30, 0.5);
+    box-shadow: 0 22px 55px rgba(0, 0, 0, 0.3), inset 0 0 34px rgba(63, 206, 219, 0.06);
+    transform: rotate(1deg);
+}
+
+.passo .intro-gallery img {
+    width: 100%;
+    height: 100%;
+    min-height: 0;
+    margin: 0;
+    padding: 10px;
+    border-color: rgba(121, 229, 232, 0.25);
+    background: linear-gradient(145deg, rgba(7, 19, 33, 0.92), rgba(31, 65, 92, 0.78));
+    object-fit: contain;
+}
+
+.passo .intro-gallery .intro-image-main {
+    grid-row: 1 / 3;
+    min-height: 276px;
+    border-radius: 16px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.passo .intro-gallery .intro-image-circuit {
+    padding: 8px 18px;
+}
+
+.passo .intro-gallery .intro-image-hand {
+    padding: 6px;
+}
+
+.intro-image-caption {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    padding: 0.35rem 0.6rem;
+    border: 1px solid rgba(121, 229, 232, 0.25);
+    border-radius: 999px;
+    background: rgba(7, 19, 33, 0.82);
+    color: #9debef;
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+}
+
+.creditos-kicker {
+    color: #79e5e8;
+    font-size: 0.85rem !important;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+}
+
+.passo .creditos-mensagem {
+    color: #b8d5e8;
+}
+
+.creditos-equipe {
+    width: min(100%, 480px);
+    margin: 1.75rem auto;
+    padding: 1.25rem;
+    border: 1px solid rgba(121, 229, 232, 0.28);
+    border-radius: 16px;
+    background: rgba(7, 19, 33, 0.45);
+}
+
+.creditos-equipe h3 {
+    margin: 0 0 0.5rem;
+    color: #79e5e8;
+    font-size: 1rem;
+}
+
+.passo .creditos-equipe p {
+    margin: 0;
+    color: #f5fbff;
+    font-size: clamp(1.2rem, 3vw, 1.6rem);
+    font-weight: 700;
+}
+
+.creditos-equipe span {
+    padding: 0 0.3rem;
+    color: #79e5e8;
+}
+
+.passo .creditos-obrigado {
+    margin-bottom: 1.5rem;
+}
+
+.creditos-acoes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.4rem;
+}
+
 .passo p {
     max-width: 68ch;
     margin: 0 auto 1rem;
@@ -93,13 +248,16 @@ main {
 
 #form-nickname {
     display: grid;
-    justify-items: center;
-    gap: 0.65rem;
-    margin-top: 1.5rem;
+    gap: 0.9rem;
+    width: min(100%, 390px);
+    margin-top: 1.4rem;
 }
 
 #form-nickname label {
+    display: block;
+    margin-bottom: 0.35rem;
     color: #b8d5e8;
+    font-size: 0.9rem;
     font-weight: 700;
 }
 
@@ -121,6 +279,22 @@ main {
 #genero:focus-visible {
     outline: 3px solid #79e5e8;
     outline-offset: 3px;
+}
+
+#nickname::placeholder {
+    color: #8299ab;
+}
+
+#form-nickname .btn-proximo {
+    width: 100%;
+    justify-content: space-between;
+    margin: 0.25rem 0 0;
+    padding-inline: 1.2rem;
+}
+
+#form-nickname .btn-proximo span {
+    font-size: 1.35rem;
+    line-height: 1;
 }
 
 .passo img {
@@ -193,6 +367,28 @@ main {
 
     .passo img.imagem-pequena {
         width: 100%;
+    }
+
+    .intro-screen.ativo {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 24px;
+        padding: 24px;
+    }
+
+    .passo .intro-copy h2 {
+        max-width: 16ch;
+    }
+
+    .intro-gallery {
+        grid-template-columns: 1fr 0.65fr;
+        min-height: 235px;
+        max-width: 400px;
+        margin: 0 auto;
+        transform: none;
+    }
+
+    .passo .intro-gallery .intro-image-main {
+        min-height: 210px;
     }
 
     .btn-proximo {

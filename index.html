@@ -18,21 +18,34 @@
         <h1>Escola do Futuro</h1>
       </header>
 
-      <section class="passo ativo" id="tela-inicial" aria-labelledby="titulo-inicial">
-        <h2 id="titulo-inicial">Prepare-se para a aventura</h2>
-        <p>Escolha como você quer ser chamado durante a história.</p>
-        <form id="form-nickname">
-          <label for="nickname">Seu nickname</label>
-          <input id="nickname" name="nickname" type="text" maxlength="20" required autocomplete="nickname">
-          <label for="genero">Como a personagem deve ser tratada?</label>
-          <select id="genero" name="genero" required>
-            <option value="" selected disabled>Selecione uma opção</option>
-            <option value="feminino">Feminino</option>
-            <option value="masculino">Masculino</option>
-            <option value="neutro">Neutro</option>
-          </select>
-          <button class="btn-proximo" type="submit">Começar aventura</button>
-        </form>
+      <section class="passo ativo intro-screen" id="tela-inicial" aria-labelledby="titulo-inicial">
+        <div class="intro-copy">
+          <p class="intro-kicker">Sua história começa agora</p>
+          <h2 id="titulo-inicial">A escola mudou. O futuro também.</h2>
+          <p class="intro-description">Um portal inesperado vai levar você a uma escola de outro tempo. Escolha seu nome e prepare-se para decidir o que acontece a seguir.</p>
+          <form id="form-nickname">
+            <div class="form-campo">
+              <label for="nickname">Como quer ser chamado?</label>
+              <input id="nickname" name="nickname" type="text" maxlength="20" required autocomplete="nickname" placeholder="Digite seu nickname">
+            </div>
+            <div class="form-campo">
+              <label for="genero">Como devemos nos referir a você?</label>
+              <select id="genero" name="genero" required>
+                <option value="" selected disabled>Selecione uma opção</option>
+                <option value="feminino">Feminino</option>
+                <option value="masculino">Masculino</option>
+                <option value="neutro">Neutro</option>
+              </select>
+            </div>
+            <button class="btn-proximo" type="submit">Começar aventura <span aria-hidden="true">→</span></button>
+          </form>
+        </div>
+        <div class="intro-gallery" aria-label="Imagens da aventura">
+          <img class="intro-image-main" src="1000243090.jpg" alt="Rosto digital formado por códigos binários">
+          <img class="intro-image-circuit" src="1000243091.png" alt="Desenho de trilhas e componentes eletrônicos">
+          <img class="intro-image-hand" src="1000243092.png" alt="Mão holográfica futurista">
+          <span class="intro-image-caption" aria-hidden="true">SINAL DO FUTURO // 2089</span>
+        </div>
       </section>
 
       <div class="passo" id="passo-0">
@@ -45,6 +58,7 @@
       </div> 
 
       <div class="passo" id="passo-25">
+        <img src="corredor.portal.png" alt="Portal azul se abre em um corredor da escola">
         <p>No caminho de volta para a sala, uma luz azul surge no corredor. O chão parece desaparecer e, num instante, você cai em uma escola muito diferente, cercada por estudantes.</p>
         <p>O que você faz?</p>
         <button class="btn-proximo" data-proximo="passo-7">EXPLORAR A ESCOLA</button>
@@ -65,7 +79,7 @@
        
 
        <div class="passo" id="passo-2"> 
-        <img src="vertigem-entrar.portal.jpg" alt="{{nickname}} atravessa o portal para outra realidade">
+        <img src="corredor.embacado.png" alt="{{nickname}} atravessa o portal para outra realidade">
           <p> Após adentrar o portal desconhecido, {{nickname}} sente o corpo inteiro formigar e a cabeça parece girar. {{identidade}} passa por sensações inexplicáveis até chegar a um lugar paralelo.</P>
             <p> O novo lugar parecia como sua escola antiga, mas tinha algo diferente.</p>
       
@@ -77,6 +91,7 @@
       
 
        <div class="passo game-over" id="passo-22">
+        <img src="inspetora.png" alt="Inspetora da escola">
         <h2>Game over: o portal desapareceu</h2>
         <p>Você chama a inspetora e conta sobre o brilho azul. Ela vai até o banheiro com você, mas, quando chegam, o portal já desapareceu. Sem pistas sobre o que aconteceu, o dia continua como se nada tivesse mudado — mas a aventura termina antes mesmo de começar.</p>
         <button class="btn-proximo" data-proximo="passo-creditos">VER CRÉDITOS</button>
@@ -157,6 +172,7 @@
       </div>
 
           <div class="passo" id="passo-7"> 
+          <img src="corredor.holograma.png" alt="Holograma luminoso dentro de uma sala futurista">
        <p>Caminhando por daquela escola futurística, {{nickname}} percebe robôs fazendo limpeza dos corredores, telas grudadas na parede mostrando os horários das aulas e uma sala chama sua atenção.</p>
        <p> A porta estava com a porta aberta e, lá dentro, {{nickname}} viu algo que parecia um holograma.</p>
        <p> ENTRAR?</p>
@@ -348,13 +364,19 @@
       </div>
 
       <section class="passo creditos" id="passo-creditos" aria-labelledby="titulo-creditos">
+        <p class="creditos-kicker">Escola do Futuro</p>
         <h2 id="titulo-creditos">Créditos</h2>
-        <p>Jogo e história</p>
-        <p>Marcos G. e Maria R.</p>
-        <p>Obrigado por jogar!</p>
-        <button class="btn-proximo" type="button" data-reiniciar>JOGAR NOVAMENTE</button>
-        <button class="btn-proximo" data-proximo="passo-flecha8">VER FINAL PRINCIPAL</button>
-        <button class="btn-proximo" data-proximo="passo-final3">VER FINAL ALTERNATIVO</button>
+        <p class="creditos-mensagem">Toda aventura começa com uma ideia — e ganha vida quando é compartilhada.</p>
+        <div class="creditos-equipe">
+          <h3>Criação do jogo e da história</h3>
+          <p>Marcos G. <span aria-hidden="true">·</span> Maria R.</p>
+        </div>
+        <p class="creditos-obrigado">Obrigado por jogar e fazer parte desta aventura.</p>
+        <div class="creditos-acoes">
+          <button class="btn-proximo" type="button" data-reiniciar>JOGAR NOVAMENTE</button>
+          <button class="btn-proximo" data-proximo="passo-flecha8">VER FINAL PRINCIPAL</button>
+          <button class="btn-proximo" data-proximo="passo-final3">VER FINAL ALTERNATIVO</button>
+        </div>
       </section>
 
 
