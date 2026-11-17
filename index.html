@@ -18,17 +18,34 @@
         <h1>Escola do Futuro</h1>
       </header>
 
-      <div class="passo ativo" id="passo-0"> 
+      <section class="passo ativo" id="tela-inicial" aria-labelledby="titulo-inicial">
+        <h2 id="titulo-inicial">Prepare-se para a aventura</h2>
+        <p>Escolha como você quer ser chamado durante a história.</p>
+        <form id="form-nickname">
+          <label for="nickname">Seu nickname</label>
+          <input id="nickname" name="nickname" type="text" maxlength="20" required autocomplete="nickname">
+          <label for="genero">Como a personagem deve ser tratada?</label>
+          <select id="genero" name="genero" required>
+            <option value="" selected disabled>Selecione uma opção</option>
+            <option value="feminino">Feminino</option>
+            <option value="masculino">Masculino</option>
+            <option value="neutro">Neutro</option>
+          </select>
+          <button class="btn-proximo" type="submit">Começar aventura</button>
+        </form>
+      </section>
+
+      <div class="passo" id="passo-0">
          <img src="cenario-passo0.jpg" alt="Corredor da escola onde começa a aventura">
            <p> Era uma manhã comum. A escola estava cheia de alunos, conversas pelos corredores e professores correndo para chegar às salas. Tudo parecia seguir a mesma rotina de sempre. </p>
-           <p> Iara caminhava pelo corredor, esperando o início da próxima aula, quando percebeu que precisava ir ao banheiro. Ela entrou e, por alguns segundos, tudo permaneceu normal. </p>
+           <p> {{nickname}} caminhava pelo corredor, esperando o início da próxima aula, quando percebeu que precisava ir ao banheiro. Ao entrar, por alguns segundos, tudo permaneceu normal. </p>
            <button class="btn-proximo" data-proximo="1" >🢂</button>
       </div> 
 
       <div class="passo" id="passo-1">
         <img src="banheiro.portal-passo-1.png" class="imagem-pequena" alt="Um portal misterioso aparece no banheiro">
           <P> De repente, uma luz estranha começou a surgir no fundo do banheiro.</P>
-           <P>Ela se aproximou, curiosa, e percebeu algo impossível: um portal brilhante havia aparecido diante dela. Sem saber o que estava acontecendo, ela observou aquela passagem misteriosa.</P>
+           <P>Com curiosidade, aproximou-se e percebeu algo impossível: um portal brilhante havia aparecido diante de si. Sem saber o que estava acontecendo, observou aquela passagem misteriosa.</P>
           <p> ENTRAR? </p>
             <button class="btn-proximo" data-proximo="2" >SIM</button>
             <button class="btn-proximo" data-proximo="3" >NÃO</button>
@@ -37,12 +54,12 @@
        
 
        <div class="passo" id="passo-2"> 
-        <img src="vertigem-entrar.portal.jpg" alt="Iara atravessa o portal para outra realidade">
-          <p> Após adentrar o portal desconhecido, Iara sente seu corpo inteiro formigar e sua cabeça parece girar, a garota passa por sensações inexplicáveis até chegar em um lugar paralelo.</P>
+        <img src="vertigem-entrar.portal.jpg" alt="{{nickname}} atravessa o portal para outra realidade">
+          <p> Após adentrar o portal desconhecido, {{nickname}} sente o corpo inteiro formigar e a cabeça parece girar. {{identidade}} passa por sensações inexplicáveis até chegar a um lugar paralelo.</P>
             <p> O novo lugar parecia como sua escola antiga, mas tinha algo diferente.</p>
       
      <button class="btn-proximo" data-proximo="04" >PERGUNTAR A ALGUÉM</button>
-     <button class="btn-proximo" data-proximo="5" >VOLTAR DE ONDE VEIO</button>
+     <button class="btn-proximo" data-proximo="05" >VOLTAR DE ONDE VEIO</button>
      <button class="btn-proximo" data-proximo="7" >EXPLORAR POR CONTA PRÓPRIA</button>
 
       </div>
@@ -50,21 +67,20 @@
 
 
       <div class="passo" id="5">
-        <img src="queda.jpg" alt="Iara cai através do portal">
-       <p> Iara decide que a aventura é grande demais e volta para casa, mas sempre se pergunta o que teria encontrado.</p>      </div>
+        <img src="queda.jpg" alt="{{nickname}} cai através do portal">
+       <p> {{nickname}} decide que a aventura é grande demais e volta para casa, mas sempre se pergunta o que teria encontrado.</p>      </div>
       
 
       <div class="passo" id="passo-3">
-        <img src="queda.jpg" alt="Iara cai através do portal">
-       <p> Iara dá de ombros e vai em direção  à saída do banheiro. Quando ela achava que tinha se livrado de uma situação anormal, o portal se abre logo abaixo de seus pés.</p>
-      <P>Iara cai em queda livre para dentro do portal, seu corpo inteiro formiga e seu estômago começa a embrulhar.</p>
+        <img src="queda.jpg" alt="{{nickname}} cai através do portal">
+       <p> {{nickname}} dá de ombros e vai em direção à saída do banheiro. Quando já parecia ter escapado de uma situação anormal, o portal se abre logo abaixo de seus pés.</p>
+      <P>{{nickname}} cai em queda livre para dentro do portal, seu corpo inteiro formiga e seu estômago começa a embrulhar.</p>
       <button class="btn-proximo" data-proximo="03" >🡻</button>
       </div>
 
       <div class="passo" id="passo-03"> 
         <img src="corredor-estudantes.png" alt="Estudantes se movimentam pelo corredor da escola">
-       <p> Quando se dá conta, a menina percebe que está no meio de um corredor escolar lotado de estudantes, os quais alguns a olham com cara de espanto e
-        outros correm para falar com ela.</p>
+       <p> Quando se dá conta, {{identidade}} está no meio de um corredor escolar lotado. Algumas pessoas olham com espanto; outras correm para conversar.</p>
        <button class="btn-proximo" data-proximo="7" >FUGIR</button>
        <button class="btn-proximo" data-proximo="8" >CONVERSAR</button>
       </div>
@@ -72,10 +88,14 @@
       
       <div class="passo" id="passo-04"> 
         <img src="corredor-robos.png" alt="Robôs circulam por um corredor futurista">
-       <p> Enquanto andava procurando alguém para perguntar aonde estava, Iara percebe que robôs fazem a limpeza da escola e telas grudadas nas paredes mostram o horário de aulas..</p>
-       <p> Iara avista um aluno em cima de um skate voador conversando com um robô vestido de professor e decide falar com o menino.</p>
+       <p> Enquanto andava procurando alguém para perguntar aonde estava, {{nickname}} percebe que robôs fazem a limpeza da escola e telas grudadas nas paredes mostram o horário de aulas..</p>
+       <p> {{nickname}} avista um aluno em cima de um skate voador conversando com um robô vestido de professor e decide falar com o menino.</p>
        <button class="btn-proximo" data-proximo="9" >FALAR QUE VEIO DO PASSADO</button>
        <button class="btn-proximo" data-proximo="10" >MENTIR FALANDO QUE É ALUNA NOVA</button>
+      </div>
+
+      <div class="passo" id="passo-05"> 
+       <p> {{nickname}} decide que a aventura é grande demais e volta para casa, mas sempre se pergunta o que teria encontrado.</p>
       </div>
 
         <!-- alterar o cenério nessa parte -->
@@ -87,13 +107,13 @@
 
       <div class="passo" id="10"> 
        <p>Ele expressa uma reação indiferente e diz que você poderia ter falado com os robõs professores que ficam nos corredores.</p>
-       <p>Apesar disso, ele te leva à primeira aula do dia, mas diz que tinha outros assuntos para resolver e vai embora, te deixando sozinha (o).</p>
+       <p>Apesar disso, ele te leva à primeira aula do dia, mas diz que tem outros assuntos para resolver e vai embora, deixando você por conta própria.</p>
        <button class="btn-proximo" data-proximo="passo-11" >🡻</button>
       </div>
 
           <div class="passo" id="passo-7"> 
-       <p>Caminhando por daquela escola futurística, Iara percebe robôs fazendo limpeza dos corredores, telas grudadas na parede mostrando os horários das aulas e uma sala chama sua atenção.</p>
-       <p> A porta estava com a porta aberta e, lá dentro, Iara viu algo que parecia um holograma.</p>
+       <p>Caminhando por daquela escola futurística, {{nickname}} percebe robôs fazendo limpeza dos corredores, telas grudadas na parede mostrando os horários das aulas e uma sala chama sua atenção.</p>
+       <p> A porta estava com a porta aberta e, lá dentro, {{nickname}} viu algo que parecia um holograma.</p>
        <p> ENTRAR?</p>
        <button class="btn-proximo" data-proximo="11" >SIM</button> 
        <button class="btn-proximo" data-proximo="12" >NÃO</button>
@@ -103,7 +123,7 @@
 
        <!-- Falta a história do passo 18 no fluxograma-->
              <div class="passo" id="passo-11"> 
-       <p>Iara entra furtivamente no que parece ser uma aula de história, o holograma mostrava fatos históricos como se acontecessem ali naquele espaço. Iara nunca imaginou ver algo assim com os seus próprios olhos</p>
+       <p>{{nickname}} entra furtivamente no que parece ser uma aula de história, o holograma mostrava fatos históricos como se acontecessem ali naquele espaço. {{nickname}} nunca imaginou ver algo assim com os seus próprios olhos</p>
       <button class="btn-proximo" data-proximo="passo-17">ADMITIR QUE VEIO DO PASSADO</button>
        <button class="btn-proximo" data-proximo="passo-18">FALAR QUE FOI A REVOLTA DAS MÁQUINAS</button>
       </div>
@@ -115,19 +135,19 @@
       
 
       <div class="passo" id="passo-12"> 
-       <p>Andando por aqueles corredores, Iara se depara com uma aula acontecendo</p>
+       <p>Andando por aqueles corredores, {{nickname}} se depara com uma aula acontecendo</p>
         <p> Ao lado de um robô com o seu interior aberto, um professor explicava o funcionamento e a programação desses robôs inteligentes que limpavam a escola e ajudavam os alunos.</p>
        <button class="btn-proximo" data-proximo="passo-15" >ENTRAR FURTIVAMENTE</button>
            <button class="btn-proximo" data-proximo="passo-16" >PASSAR RETO</button>
       </div>
 
       <div class="passo" id="passo-17"> 
-       <p>O professor e os alunos parecem surpresos, não por você ter vindo do passado, mas sim por Iara estar infiltrada (o) na aula.</p>
+       <p>O professor e os alunos parecem surpresos, não por você ter vindo do passado, mas por você ter entrado na aula sem avisar.</p>
        <button class="btn-proximo" data-proximo="passo-flecha1" >🡻</button>
       </div>
       
       <div class="passo" id="passo-8"> 
-        <p>Alguns estudantes a fazem diversas perguntas, outros tentam ajudá-la, até que um professor se aproxima.</p>
+        <p>Alguns estudantes fazem diversas perguntas, outras pessoas tentam ajudar, até que um professor se aproxima.</p>
         <p>O professor diz que a escola estava lhe esperando, mas não daquele jeito</p>
            <button class="btn-proximo" data-proximo="passo-flecha1" >🡻</button>
       </div>
@@ -144,7 +164,7 @@
       </div>
 
        <div class="passo" id="passo-flecha2">
-        <p>Andando por aqueles corredores, Iara se depara com uma aula acontecendo. </p>
+        <p>Andando por aqueles corredores, {{nickname}} se depara com uma aula acontecendo. </p>
         <p> Ao lado de um robô com o seu interior aberto, um professor explicava o funcionamento e a programação desses robôs inteligentes que limpavam a escola e ajudavam os alunos.</p>
            <button class="btn-proximo" data-proximo="passo-15" >ENTRAR FURTIVAMENTE</button>
            <button class="btn-proximo" data-proximo="passo-16" >PASSAR RETO</button>
@@ -167,14 +187,14 @@
       </div>
 
       <div class="passo" id="passo-16">
-        <p>Iara percebe uma forte luz azul vindo da entrada do banheiro e decide checar. </p>
+        <p>{{nickname}} percebe uma forte luz azul vindo da entrada do banheiro e decide checar. </p>
          <p>Ao chegar lá, se depara com o mesmo portal de antes. Você acredita ser o portal que te levará para a realidade de onde veio.</p>
            <button class="btn-proximo" data-proximo="passo-flecha4" >SAIR DO BANHEIRO</button>
            <button class="btn-proximo" data-proximo="passo-20" >ENTRAR</button>
       </div>
 
         <div class="passo" id="passo-20">
-        <p>Iara passa por aquelas mesmas sensações bizarras de atravessar o portal.</p>
+        <p>{{nickname}} passa por aquelas mesmas sensações bizarras de atravessar o portal.</p>
          <p>Mas, agora, o que você vê é aquela antiga escola de novo.</p>
       </div>
 
@@ -184,7 +204,7 @@
       </div>
 
        <div class="passo" id="passo-flecha6">
-        <p>Iara sabe que, da realidade em que veio, as mudanças climáticas já afetam gravemente os ecossistemas e a população, mas nunca pensou que chegaria nesse estado tão rápido.</p>
+        <p>{{nickname}} sabe que, da realidade em que veio, as mudanças climáticas já afetam gravemente os ecossistemas e a população, mas nunca pensou que chegaria nesse estado tão rápido.</p>
       <button class="btn-proximo" data-proximo="passo-flecha7" >🡻</button>
       </div>
 
@@ -196,7 +216,7 @@
 
       <div class="passo" id="passo-final1">
         <p>Os especialistas parecem aliviados. Eles te entregam os materiais necessários e preparam a sua volta para casa.
-Aquele portal que Iara viu no início de sua jornada reaparece, mas, agora, você está completamente diferente de como entrou. Sua missão é grande e você está disposta (o) em ajudar a salvar o mundo.</p>
+Aquele portal que {{nickname}} viu no início de sua jornada reaparece, mas, agora, você está completamente diferente de como entrou. Sua missão é grande e você tem determinação para ajudar a salvar o mundo.</p>
       <button class="btn-proximo" data-proximo="passo-flecha8" >🡻</button>
       </div>
 
@@ -208,7 +228,7 @@ O portal que você viu no início de sua jornada reaparece e sua consciência le
 
 
        <div class="passo" id="passo-flecha8">
-        <p>Iara passa por aquelas mesmas sensações estranhas de atravessar o portal. Agora, o que você vê é aquela antiga escola de novo.</p>
+        <p>{{nickname}} passa por aquelas mesmas sensações estranhas de atravessar o portal. Agora, o que você vê é aquela antiga escola de novo.</p>
       </div>
 
 
